@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const utcHours = now.getUTCHours().toString().padStart(2, '0');
+            const utcMinutes = now.getUTCMinutes().toString().padStart(2, '0');
+            const utcSeconds = now.getUTCSeconds().toString().padStart(2, '0');
+            document.getElementById("clock").innerText = `${utcHours}:${utcMinutes}:${utcSeconds} UTC`;
+        }
+        setInterval(updateClock, 1000);
+    </script>
+</head>
+<body onload="updateClock()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="https://astonishing-eggshell-hamster-787.vscodeedu.app">Game Library</a></li>
+                <li><a href="clock.html">Clock</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Universal Clock</h1>
+        <p id="clock">Loading...</p>
+    </main>
+    <footer>
+        <p>Dhruv B. 2025</p>
+        
+    </footer>
+    <script type="text/javascript" src="script.js" defer></script>
+</body>
+</html>
